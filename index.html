@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focustop Consulting Singapore - Senternet Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .iframe-container {
+            height: calc(100vh - 64px); /* Subtract header height */
+            width: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .nav-active {
+            border-bottom: 3px solid #3b82f6;
+            color: #3b82f6;
+        }
+        .tab-content {
+            display: none;
+            height: 100%;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md h-16 flex items-center justify-between px-6 sticky top-0 z-50">
+        <div class="flex items-center space-x-4">
+            <div class="bg-blue-600 p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-gray-800 leading-tight">Focustop Consulting</h1>
+                <p class="text-xs text-blue-600 font-semibold tracking-wider uppercase">Singapore</p>
+            </div>
+        </div>
+
+        <div class="hidden md:flex space-x-8 h-full items-center">
+            <button onclick="showTab('home')" id="nav-home" class="nav-active font-medium px-2 py-1 transition-all duration-200 hover:text-blue-500">Senternet Home</button>
+            <button onclick="showTab('gorisankar')" id="nav-gorisankar" class="font-medium px-2 py-1 transition-all duration-200 hover:text-blue-500">Gorisankar Portal</button>
+            <button onclick="showTab('sudha')" id="nav-sudha" class="font-medium px-2 py-1 transition-all duration-200 hover:text-blue-500">Sudha Portal</button>
+        </div>
+
+        <!-- Mobile Menu Toggle (Simplified) -->
+        <div class="md:hidden">
+            <select onchange="showTab(this.value)" class="bg-gray-100 border rounded px-2 py-1 text-sm">
+                <option value="home">Home</option>
+                <option value="gorisankar">Gorisankar</option>
+                <option value="sudha">Sudha</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="h-full">
+        
+        <!-- Tab: Home (Senternet) -->
+        <div id="tab-home" class="tab-content active overflow-y-auto">
+            <div class="max-w-6xl mx-auto p-8">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+                    <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-2">Welcome to Senternet</h2>
+                        <p class="opacity-90">Centralized Worker Data Entry & Management System for Focustop Consulting Singapore.</p>
+                    </div>
+                    
+                    <div class="p-8 grid md:grid-cols-3 gap-8">
+                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                            <h3 class="text-lg font-bold text-blue-800 mb-3">Worker Entry</h3>
+                            <p class="text-gray-600 text-sm mb-4">Register new personnel and update existing worker profiles with ease.</p>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-blue-700 transition">Add Worker</button>
+                        </div>
+                        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
+                            <h3 class="text-lg font-bold text-indigo-800 mb-3">Availability Check</h3>
+                            <p class="text-gray-600 text-sm mb-4">Real-time status tracking to identify available workers for current projects.</p>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-indigo-700 transition">View Roster</button>
+                        </div>
+                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                            <h3 class="text-lg font-bold text-emerald-800 mb-3">System Overview</h3>
+                            <p class="text-gray-600 text-sm mb-4">Senternet synchronizes data entry across all operational portals for consistency.</p>
+                            <span class="text-emerald-600 text-xs font-bold uppercase">System Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Project Guidelines</h3>
+                        <ul class="space-y-3 text-gray-600 text-sm">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Ensure NRIC/FIN details are verified.</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Daily attendance sync required before 09:00 SGT.</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Update deployment status immediately upon project change.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Quick Stats</h3>
+                        <div class="flex justify-between items-center py-2 border-b">
+                            <span class="text-gray-500">Active Workers</span>
+                            <span class="font-bold text-blue-600">142</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b">
+                            <span class="text-gray-500">Available Now</span>
+                            <span class="font-bold text-emerald-600">28</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-gray-500">Pending Clearances</span>
+                            <span class="font-bold text-orange-600">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Gorisankar -->
+        <div id="tab-gorisankar" class="tab-content h-full">
+            <div class="bg-gray-100 p-3 flex items-center justify-between border-b">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">G</div>
+                    <div>
+                        <p class="text-sm font-bold text-gray-800">Gorisankar</p>
+                        <p class="text-xs text-gray-500">Focustop Consulting Singapore</p>
+                    </div>
+                </div>
+                <div class="text-right hidden sm:block">
+                    <p class="text-xs font-mono text-gray-400">Portal Instance: FTC-GRI-V1</p>
+                </div>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://script.google.com/macros/s/AKfycbzChZCbBK6I6pBb4zvPSTkJmex-ZmP-BfRUVu-dT7BuZ7hnYQx7oCZBScIdvsyD8nSF/exec"></iframe>
+            </div>
+        </div>
+
+        <!-- Tab: Sudha -->
+        <div id="tab-sudha" class="tab-content h-full">
+            <div class="bg-gray-100 p-3 flex items-center justify-between border-b">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">S</div>
+                    <div>
+                        <p class="text-sm font-bold text-gray-800">Sudha</p>
+                        <p class="text-xs text-gray-500">Focustop Consulting Singapore</p>
+                    </div>
+                </div>
+                <div class="text-right hidden sm:block">
+                    <p class="text-xs font-mono text-gray-400">Portal Instance: FTC-SUD-V1</p>
+                </div>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://script.google.com/macros/s/AKfycbzBf41LiA6k2ZiNuBCTZ4arsRvR_quEHyWOlpBVb8TfaJdQK4W7he9Hc9YrYS2DXQ6IQw/exec"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all content
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active nav styles
+            const navButtons = document.querySelectorAll('nav button');
+            navButtons.forEach(btn => btn.classList.remove('nav-active'));
+
+            // Show selected content
+            const activeTab = document.getElementById('tab-' + tabId);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+
+            // Update nav button styles
+            const activeNav = document.getElementById('nav-' + tabId);
+            if (activeNav) {
+                activeNav.classList.add('nav-active');
+            }
+        }
+    </script>
+</body>
+</html>
