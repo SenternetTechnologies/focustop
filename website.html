@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focustop Consulting Pte Ltd | Singapore Manpower Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide-react/0.263.1/umd/lucide-react.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.18); }
+        .bg-singapore { background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%); }
+        .hero-pattern { background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">F</div>
+                    <span class="text-2xl font-800 tracking-tight text-blue-900">FOCUSTOP <span class="text-red-600">CONSULTING</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                    <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="hover:text-blue-600 transition">About</a>
+                    <a href="#team" class="hover:text-blue-600 transition">Our Team</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+                </div>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-bold transition shadow-lg shadow-blue-200">
+                    Hire Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden bg-white pt-16 pb-32">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50 skew-x-12 transform translate-x-20 z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1 bg-red-100 text-red-600 rounded-full text-sm font-bold mb-6">#1 Manpower Agency in Singapore</span>
+                    <h1 class="text-5xl md:text-7xl font-800 text-slate-900 leading-tight mb-6">
+                        Bridging Talent with <span class="text-blue-600">Opportunity</span> in Singapore.
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                        Focustop Consulting Pte Ltd provides premium recruitment solutions for diverse industries, ensuring the right fit for your business growth.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition flex items-center gap-2">
+                            Explore Services <i data-lucide="arrow-right"></i>
+                        </a>
+                        <div class="flex items-center gap-3 px-6 py-4 border border-slate-200 rounded-xl">
+                            <i data-lucide="phone-call" class="text-blue-600"></i>
+                            <span class="font-bold">+65 94682715</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="animate-float">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Recruitment" class="rounded-3xl shadow-2xl relative z-10">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 border border-slate-100">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-green-100 rounded-full text-green-600"><i data-lucide="check-circle"></i></div>
+                            <div>
+                                <p class="text-2xl font-bold text-slate-900">5000+</p>
+                                <p class="text-sm text-slate-500 font-medium">Placements Done</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-800 text-blue-900 mb-4">Our Key Leadership</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Expert professionals dedicated to maintaining the highest standards of manpower consulting in Singapore.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="bg-white rounded-3xl p-8 card-hover border border-slate-100 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="data:image/png;base64,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" alt="Ashokumar" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">ANDIAYAPPA DEVAR ASHOKUMAR</h3>
+                    <p class="text-blue-600 font-semibold mb-2">Key Appointment Holder</p>
+                    <p class="text-slate-500 text-sm">Reg No: R1875358</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-white rounded-3xl p-8 card-hover border border-slate-100 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="data:image/png;base64,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" alt="Dhanalakshmi" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">SINGARAVEL DHANALAKSHMI</h3>
+                    <p class="text-red-600 font-semibold mb-2">Other EA Personnel</p>
+                    <p class="text-slate-500 text-sm">Reg No: R1989697</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-white rounded-3xl p-8 card-hover border border-slate-100 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="data:image/png;base64,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" alt="Ronaldo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">RONALDO LAO LINGAT</h3>
+                    <p class="text-blue-600 font-semibold mb-2">Key Appointment Holder</p>
+                    <p class="text-slate-500 text-sm">Reg No: R1875911</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offices Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Singapore Main Office -->
+                <div class="bg-blue-900 text-white rounded-3xl p-10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <i data-lucide="building-2" size="120"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-8">Main Branch (Singapore)</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="text-red-400 mt-1"></i>
+                            <p class="text-xl">7, TEMASEK BOULEVARD, #12-07,<br>SUNTEC TOWER ONE, Singapore - 038987</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="phone" class="text-red-400"></i>
+                            <p class="text-xl font-bold">+65 94682715</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="mail" class="text-red-400"></i>
+                            <p class="text-xl">info@focustop.com.sg</p>
+                        </div>
+                    </div>
+                    <div class="mt-12 h-48 bg-blue-800 rounded-2xl overflow-hidden grayscale">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m3!1d3988.8139!2d103.8584!3d1.2941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19acc3!2sSuntec%20Tower%20One!5e0!3m2!1sen!2ssg!4v1690000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Local Pudukkottai Office -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-10">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8">Local Office (Tamil Nadu)</h2>
+                    <div class="flex items-start gap-4 mb-8">
+                        <i data-lucide="map-pin" class="text-blue-600 mt-1"></i>
+                        <div>
+                            <p class="text-xl font-bold text-slate-800">Pudukkottai Regional Office</p>
+                            <p class="text-slate-600">Specializing in Local Manpower Sourcing</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Forms / Placeholder Cards for Employers -->
+                    <div class="grid gap-4">
+                        <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Connect with our local experts</p>
+                        
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-blue-600"><i data-lucide="user"></i></div>
+                                <div>
+                                    <p class="font-bold">Contact Person 1</p>
+                                    <p class="text-xs text-slate-500 font-medium">Recruitment Manager</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 hover:underline font-bold">Call Now</button>
+                        </div>
+
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-blue-600"><i data-lucide="user"></i></div>
+                                <div>
+                                    <p class="font-bold">Contact Person 2</p>
+                                    <p class="text-xs text-slate-500 font-medium">Operations Lead</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 hover:underline font-bold">Call Now</button>
+                        </div>
+
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl flex items-center justify-between shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-blue-600"><i data-lucide="user"></i></div>
+                                <div>
+                                    <p class="font-bold">Contact Person 3</p>
+                                    <p class="text-xs text-slate-500 font-medium">Client Support</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-600 hover:underline font-bold">Call Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-slate-900 font-bold">F</div>
+                        <span class="text-xl font-bold text-white">Focustop Consulting</span>
+                    </div>
+                    <p class="leading-relaxed">Singapore's leading boutique manpower agency providing end-to-end recruitment solutions with integrity and speed.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="hover:text-blue-400 transition">Job Seekers</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">For Employers</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Work Permits</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">S Pass / EP Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Social Connect</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition"><i data-lucide="facebook" size="18"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition"><i data-lucide="linkedin" size="18"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition"><i data-lucide="instagram" size="18"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-sm">
+                <p class="mb-2">&copy; 2025 Focustop Consulting Pte Ltd. All Rights Reserved.</p>
+                <p class="text-slate-600">designed by senternet technologies, aranthangi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
