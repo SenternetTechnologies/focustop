@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusTop Consulting Pte Ltd | Internal Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .portal-iframe {
+            width: 100%;
+            height: calc(100vh - 64px);
+            border: none;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Modal Animation */
+        .modal-enter {
+            animation: modalFadeIn 0.3s ease-out forwards;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Splash/Home Screen -->
+    <div id="home-screen" class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <nav class="bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center shadow-sm">
+            <div class="flex items-center space-x-3">
+                <div class="bg-red-600 p-2 rounded-lg">
+                    <i class="fas fa-briefcase text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-900 leading-none">Focustop Consulting Pte Ltd</h1>
+                    <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest font-semibold">Singapore Employment Agency</p>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <span class="text-sm text-gray-600 font-medium">Compliance & Manpower Solutions</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex items-center justify-center p-6 gradient-bg">
+            <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Worker 1: Senthil -->
+                <div onclick="handlePortalClick('senthil')" class="glass-card rounded-2xl p-8 text-center cursor-pointer group btn-hover">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-user-tie text-4xl text-blue-600 group-hover:text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">SENTHIL</h2>
+                    <p class="text-gray-500 mt-2">Main Portal Access</p>
+                    <div class="mt-6 inline-flex items-center text-blue-600 font-semibold">
+                        Access Portal <i class="fas fa-lock ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Worker 2: Sudha -->
+                <div onclick="openPortal('https://script.google.com/macros/s/AKfycbzBf41LiA6k2ZiNuBCTZ4arsRvR_quEHyWOlpBVb8TfaJdQK4W7he9Hc9YrYS2DXQ6IQw/exec', 'Sudha')" class="glass-card rounded-2xl p-8 text-center cursor-pointer group btn-hover">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                        <i class="fas fa-user-nurse text-4xl text-purple-600 group-hover:text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">SUDHA</h2>
+                    <p class="text-gray-500 mt-2">Portal S Management</p>
+                    <div class="mt-6 inline-flex items-center text-purple-600 font-semibold">
+                        Access Portal <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Worker 3: Gowri -->
+                <div onclick="openPortal('https://script.google.com/macros/s/AKfycbzChZCbBK6I6pBb4zvPSTkJmex-ZmP-BfRUVu-dT7BuZ7hnYQx7oCZBScIdvsyD8nSF/exec', 'Gowri')" class="glass-card rounded-2xl p-8 text-center cursor-pointer group btn-hover">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-emerald-100 rounded-full flex items-center justify-center group-hover:bg-emerald-600 transition-colors">
+                        <i class="fas fa-user-shield text-4xl text-emerald-600 group-hover:text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">GOWRI</h2>
+                    <p class="text-gray-500 mt-2">Portal G Management</p>
+                    <div class="mt-6 inline-flex items-center text-emerald-600 font-semibold">
+                        Access Portal <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white p-6 border-t border-gray-200">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2024 FocusTop Consulting Pte Ltd. Singapore Licensed EA.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://www.mom.gov.sg/" target="_blank" class="hover:underline">MOM Compliance</a>
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Support</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden modal-enter">
+            <div class="p-6 border-b border-gray-100 text-center">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-halved text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Security Check</h3>
+                <p class="text-gray-500 text-sm mt-1">Please enter Senthil's portal password</p>
+            </div>
+            <div class="p-6">
+                <input type="password" id="portal-password" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-center tracking-[1em] text-xl" placeholder="••••">
+                <p id="error-msg" class="text-red-500 text-xs mt-2 hidden text-center">Incorrect password. Please try again.</p>
+            </div>
+            <div class="p-6 pt-0 flex space-x-3">
+                <button onclick="closeModal()" class="flex-1 px-4 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-colors">Cancel</button>
+                <button onclick="verifyPassword()" class="flex-1 px-4 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portal View (Iframe Container) -->
+    <div id="portal-view" class="hidden fixed inset-0 z-[100] bg-white">
+        <header class="h-16 bg-gray-900 text-white flex justify-between items-center px-6">
+            <div class="flex items-center space-x-4">
+                <button onclick="closePortal()" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <div class="h-6 w-px bg-gray-700"></div>
+                <div class="flex items-center space-x-2">
+                    <i id="portal-icon" class="fas fa-circle text-xs text-emerald-500"></i>
+                    <span id="portal-name" class="font-semibold tracking-wide">Portal Name</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button onclick="refreshIframe()" class="p-2 hover:bg-gray-800 rounded-lg text-gray-400">
+                    <i class="fas fa-redo-alt"></i>
+                </button>
+                <div class="bg-gray-800 px-3 py-1 rounded text-xs font-mono text-gray-400">SECURE_LINK_ACTIVE</div>
+            </div>
+        </header>
+        <iframe id="portal-frame" src="" class="portal-iframe"></iframe>
+    </div>
+
+    <script>
+        const SENTHIL_LINK = "https://script.google.com/macros/s/AKfycbwlk2uRWquYZZIrDPDNmngObij4g3SIXbuYQX2-xfY_Pv23CvNo4LQLLy3HRQQPexBc2A/exec";
+        const PASSWORD_VAL = "9843";
+
+        function handlePortalClick(user) {
+            if (user === 'senthil') {
+                document.getElementById('password-modal').classList.remove('hidden');
+                document.getElementById('portal-password').focus();
+            }
+        }
+
+        function verifyPassword() {
+            const pwdInput = document.getElementById('portal-password');
+            const errorMsg = document.getElementById('error-msg');
+            
+            if (pwdInput.value === PASSWORD_VAL) {
+                closeModal();
+                openPortal(SENTHIL_LINK, 'Senthil');
+                pwdInput.value = '';
+                errorMsg.classList.add('hidden');
+            } else {
+                errorMsg.classList.remove('hidden');
+                pwdInput.classList.add('border-red-500');
+                setTimeout(() => {
+                    pwdInput.classList.remove('border-red-500');
+                }, 1000);
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('password-modal').classList.add('hidden');
+            document.getElementById('portal-password').value = '';
+            document.getElementById('error-msg').classList.add('hidden');
+        }
+
+        function openPortal(url, name) {
+            const portalView = document.getElementById('portal-view');
+            const portalFrame = document.getElementById('portal-frame');
+            const portalNameDisplay = document.getElementById('portal-name');
+
+            portalNameDisplay.innerText = name.toUpperCase() + " PORTAL";
+            portalFrame.src = url;
+            portalView.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePortal() {
+            document.getElementById('portal-view').classList.add('hidden');
+            document.getElementById('portal-frame').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        function refreshIframe() {
+            const frame = document.getElementById('portal-frame');
+            frame.src = frame.src;
+        }
+
+        // Enter key for password
+        document.getElementById('portal-password').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                verifyPassword();
+            }
+        });
+    </script>
+</body>
+</html>
